@@ -1,0 +1,88 @@
+/*
+    base.css：基礎樣式（第 1 個載入）
+    - 全站的色彩變數、重設、body 與內文排版。
+    - 原本 CSS 的設計完整保留；標示「新增」的規則是為了內文段落、清單與圖片排版補上的。
+*/
+
+/* ==========================================================
+   全域設定與變數 (Design Tokens)
+   帝國糖廠主題：日式紅磚、星泉湖畔、沉穩療癒
+   ========================================================== */
+:root {
+  --primary-color: #C85A32;    /* 磚紅色／焦糖橘：對應日治紅磚建築與歷史暖調 */
+  --secondary-color: #2B4C5F;  /* 湖水藍灰：呼應星泉湖畔的沉穩水景與文青靜謐感 */
+  --accent-color: #D62828;     /* 亮紅點綴：重點提示與互動標籤 */
+  --bg-light: #FDFBF7;         /* 溫潤淺底：營造舒適、無壓力的放鬆氛圍 */
+  --surface-color: #FFFFFF;    /* 卡片純白底 */
+  --text-main: #2B2D42;        /* 主文字色 */
+  --text-muted: #6C757D;       /* 次要文字色 */
+  --border-color: #E9ECEF;     /* 淺色邊框 */
+
+  --font-stack: "Noto Sans TC", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "微軟正黑體", sans-serif;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-stack);
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================
+   新增：內文排版
+   上方的 * 把所有 margin、padding 歸零，所以段落、清單、圖片需要補回間距。
+   ========================================================== */
+
+/* 內文連結顏色使用磚紅色。 */
+a {
+  color: var(--primary-color);
+  text-underline-offset: 3px;
+}
+
+/* 鍵盤 Tab 移入時的焦點提示。 */
+a:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* 卡片中相連的段落之間留出間距。 */
+.section-card p + p,
+.section-card p + .content-list,
+.section-card .content-list + p {
+  margin-top: 0.9rem;
+}
+
+/* 清單：補回左側縮排，項目之間留間距。 */
+.content-list {
+  padding-left: 1.5rem;
+  margin-top: 0.9rem;
+}
+
+.content-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* 圖片：隨容器縮小並保持比例（RWD）。 */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

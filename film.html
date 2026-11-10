@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- 宣告使用 HTML5。 -->
+<html lang="zh-Hant">
+<head>
+    <!-- ===== SEO 與分享資訊：每一頁都有自己的 title 與 description ===== -->
+    <meta charset="UTF-8">
+    <!-- viewport 讓手機以裝置寬度顯示，是 RWD 的第一步。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="影展短片「暫停蔗一刻」：手機只剩 1% 的學生，翻出糖廠舊照片，約好友走進帝國製糖廠，在湖畔與祈福卡之間重新充電到 100%。">
+    <meta name="keywords" content="暫停蔗一刻短片, 影展, 心靈充電站, 帝國製糖廠, 行銷系影展">
+    <meta name="author" content="吳佳芯">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph：分享到社群時顯示的標題、摘要與縮圖。 -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="暫停蔗一刻｜帝國製糖廠影展專題">
+    <meta property="og:title" content="影展短片｜暫停蔗一刻">
+    <meta property="og:description" content="影展短片「暫停蔗一刻」：手機只剩 1% 的學生，翻出糖廠舊照片，約好友走進帝國製糖廠，在湖畔與祈福卡之間重新充電到 100%。">
+    <meta property="og:image" content="images/cover.jpg">
+    <meta property="og:image:alt" content="帝國製糖廠臺中營業所的建築正面">
+    <!-- 部署後可再加上 canonical 與 og:url，填入真實網址。 -->
+    <title>影展短片｜暫停蔗一刻</title>
+    <!--
+        切割後的外部 CSS：四個檔案都放在 css 資料夾，依「基礎 → 版面 → 元件 → 響應式」順序載入。
+        相對路徑 css/xxx.css 從本 HTML 所在的資料夾出發，進入 css 子資料夾讀取檔案。
+    -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- 頂部導覽列：網站名稱與五個分頁的選單，捲動時固定在畫面上方（position: sticky）。 -->
+    <header class="main-header" id="top">
+        <p class="logo"><a href="index.html">暫停蔗一刻<span>帝國製糖廠影展專題</span></a></p>
+        <nav class="top-nav" aria-label="網站導覽">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="story.html">糖廠故事</a></li>
+                <li><a href="film.html" class="active" aria-current="page">影展短片</a></li>
+                <li><a href="visit.html">漫遊指南</a></li>
+                <li><a href="team.html">製作團隊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- layout-wrapper：側邊欄 + 主要內容的雙欄版面；手機版改成上下排列。 -->
+    <div class="layout-wrapper">
+        <!-- aside 是側邊欄：本頁目錄、參觀資訊與關鍵字標籤。 -->
+        <aside class="sidebar" aria-label="側邊欄">
+            <div class="sidebar-box">
+                <h3>本頁目錄</h3>
+                <ul class="side-menu">
+                    <li><a href="#plot">故事大綱</a></li>
+                    <li><a href="#video">觀看短片</a></li>
+                    <li><a href="#shots">關鍵畫面</a></li>
+                    <li><a href="#spirit">廣告精神</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box info-box">
+                <h3>參觀資訊</h3>
+                <p><strong>地址</strong><br>臺中市東區樂業路 30 號</p>
+                <p><strong>交通</strong><br>鄰近臺中火車站與轉運中心，緊鄰 LaLaport</p>
+                <p><strong>園區</strong><br>營業所＋約 6 公頃的湧泉公園（星泉湖）</p>
+            </div>
+            <div class="sidebar-box">
+                <h4>關鍵字</h4>
+                <span class="tag">#1%到100%</span>
+                <span class="tag">#舊相框</span>
+                <span class="tag">#祈福卡</span>
+                <span class="tag">#好友同行</span>
+            </div>
+        </aside>
+
+        <!-- main 是本頁唯一的主要內容區。 -->
+        <main class="content-area" id="main-content">
+            <section class="hero-section">
+                <h1>影展短片</h1>
+                <p class="subtitle">從低電量焦慮，到 100% 滿電的平靜。</p>
+            </section>
+
+            <section class="section-card" id="plot">
+                <div class="section-title">
+                    <h2>故事大綱</h2>
+                    <p>沒電與充電</p>
+                </div>
+                <p>
+                    做完滿滿報告的學生，發現手機只剩 <strong>1%</strong>，才驚覺自己也需要充電。
+                    她翻出相框裡的糖廠舊照片，打電話約好友先去隔壁餐廳吃飯，再一起走進帝國糖廠。
+                </p>
+                <p>
+                    兩人在湖畔散步、騎車，好友還準備了祈福卡驚喜。
+                    最後，新的合照被放進相框——這一次，她充到了 <strong>100%</strong>。
+                </p>
+            </section>
+
+            <section class="section-card" id="video">
+                <div class="section-title">
+                    <h2>觀看短片</h2>
+                    <p>甲二組影展作品</p>
+                </div>
+                <!--
+                    video-container 用 padding-bottom: 56.25% 做出 16:9 比例，手機上也不會變形。
+                    原本 YouTube 嵌入碼的 frameborder 改由 CSS 的 border: 0 處理。
+                    本機請用 Live Server 預覽；直接以 file:// 開啟可能出現錯誤 153。
+                -->
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/_sD8eoPAWGE"
+                        title="影展短片：暫停蔗一刻"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="note-text"><a href="https://www.youtube.com/watch?v=_sD8eoPAWGE" target="_blank" rel="noopener noreferrer">在 YouTube 觀看影展短片（另開分頁）</a></p>
+            </section>
+
+            <section class="section-card" id="shots">
+                <div class="section-title">
+                    <h2>關鍵畫面</h2>
+                    <p>把抽象的情緒，變成具體的物件</p>
+                </div>
+                <div class="grid-system">
+                    <article class="grid-card">
+                        <span class="shot-number">SCENE 01</span>
+                        <h3>手機 1%</h3>
+                        <p>報告寫完、手機沒電，象徵被生活耗盡的自己。</p>
+                    </article>
+                    <article class="grid-card">
+                        <span class="shot-number">SCENE 02</span>
+                        <h3>舊相框</h3>
+                        <p>相框裡的糖廠舊照片，喚起與好友的回憶。</p>
+                    </article>
+                    <article class="grid-card">
+                        <span class="shot-number">SCENE 03</span>
+                        <h3>祈福卡</h3>
+                        <p>好友準備的驚喜，讓陪伴成為最好的充電線。</p>
+                    </article>
+                    <article class="grid-card">
+                        <span class="shot-number">SCENE 04</span>
+                        <h3>滿電 100%</h3>
+                        <p>新合照放進相框，帶著能量繼續出發。</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-card" id="spirit">
+                <div class="section-title">
+                    <h2>廣告精神</h2>
+                    <p>休息並不代表結束，而是為了繼續走下一段路</p>
+                </div>
+                <p>
+                    帝國製糖廠過去曾是高壓運作的工業場所，也曾停止運轉，如今轉型為結合歷史與休憩的都市綠洲。
+                    這就像人們在經歷忙碌與停頓後，以不同的形態繼續前行。
+                </p>
+                <ul class="content-list">
+                    <li><strong>打中高壓族群的心聲：</strong>從被報告、工作與訊息追著跑的日常切入，引起共鳴。</li>
+                    <li><strong>傳達「暫停是為了繼續前行」：</strong>讓大家理解休息只是生活中的一次暫停。</li>
+                    <li><strong>翻轉糖廠形象：</strong>展現歷史建築在現代都市中的新價值，帶動社群分享。</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="main-footer">
+        <p>暫停蔗一刻｜關掉喧囂，在糖廠遇見平靜</p>
+        <p><small>甲二組 · 作者：吳佳芯 · 更新日期：<time datetime="2026-11-10">2026 年 11 月 10 日</time></small></p>
+        <p><small>本網站為行銷系課堂專題，場館展覽與營業資訊請以官方最新公告為準。</small></p>
+        <p><a href="#top" class="footer-link">回到頁首</a></p>
+    </footer>
+</body>
+</html>

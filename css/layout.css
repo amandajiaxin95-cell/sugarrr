@@ -1,0 +1,145 @@
+/*
+    layout.css：版面配置（第 2 個載入）
+    - 頂部導覽列、側邊欄 + 主內容的雙欄版面、頁尾。
+*/
+
+/* ==========================================================
+   頂部導覽列 (Navbar)
+   ========================================================== */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--secondary-color);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.main-header .logo span {
+  color: #F4A261;
+  margin-left: 0.5rem;
+}
+
+.top-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.top-nav a {
+  color: #EAE2B7;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* ==========================================================
+   雙欄整體佈局：側邊欄 + 主內容
+   ========================================================== */
+.layout-wrapper {
+  display: flex;
+  flex: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+}
+
+/* 側邊欄樣式 */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.sidebar-box {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-box h3,
+.sidebar-box h4 {
+  color: var(--secondary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.3rem;
+}
+
+.side-menu {
+  list-style: none;
+}
+
+.side-menu li {
+  margin-bottom: 0.5rem;
+}
+
+.side-menu a {
+  color: var(--text-main);
+  text-decoration: none;
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.side-menu a:hover {
+  background-color: #F8E8E3;
+  color: var(--primary-color);
+}
+
+.info-box p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+/* 主內容區塊 */
+.content-area {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ==========================================================
+   頁尾
+   ========================================================== */
+.main-footer {
+  margin-top: auto;
+  background-color: var(--secondary-color);
+  color: #EAE2B7;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* 新增：頁尾段落間距與「回到頁首」連結顏色。 */
+.main-footer p + p {
+  margin-top: 0.3rem;
+}
+
+.main-footer .footer-link {
+  color: #F4A261;
+}

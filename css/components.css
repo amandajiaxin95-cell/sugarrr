@@ -1,0 +1,220 @@
+/*
+    components.css：元件樣式（第 3 個載入）
+    - 標籤、封面、按鈕、內容卡片、影片、Grid 卡片、表格、地圖。
+    - CSS 裡的 url() 從 css 資料夾出發，所以封面圖片要寫成 ../images/cover.jpg（先回上一層，再進 images）。
+*/
+
+.tag {
+  display: inline-block;
+  background-color: #F1F3F5;
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ==========================================================
+   封面區塊 (Hero)
+   ========================================================== */
+.hero-section {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(43, 76, 95, 0.85),
+      rgba(200, 90, 50, 0.8)
+    ),
+    url('../images/cover.jpg') center/cover no-repeat;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* 每頁的主標題 h1 放在封面裡，所以 h1 也套用原本 h2 的樣式。 */
+.hero-section h1,
+.hero-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section .subtitle {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+/* 新增：沒有按鈕的封面，副標題下方不需要多餘留白。 */
+.hero-section .subtitle:last-child {
+  margin-bottom: 0;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+}
+
+/* ==========================================================
+   卡片與區塊
+   ========================================================== */
+.section-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+}
+
+.section-title h2 {
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+}
+
+.section-title p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================
+   影片自適應容器 (16:9 RWD)
+   ========================================================== */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 新增：影片與地圖下方的連結說明。 */
+.note-text {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* 新增：Google 地圖的寬度與高度。 */
+.map-frame {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* ==========================================================
+   Grid System (CSS Grid 網格系統)
+   ========================================================== */
+.grid-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-card {
+  background: #F8F9FA;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+  border-color: var(--primary-color);
+}
+
+.card-tag {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.shot-number {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.grid-card h3 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.grid-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* 新增：卡片中第二段（連結）與上一段的間距。 */
+.grid-card p + p {
+  margin-top: 0.6rem;
+}
+
+/* ==========================================================
+   表格樣式
+   ========================================================== */
+.info-table-container {
+  overflow-x: auto;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.styled-table th {
+  background-color: #F1F3F5;
+  color: var(--secondary-color);
+}
+
+/* 新增：表格標題靠左，與下方表格保留間距。 */
+.styled-table caption {
+  text-align: left;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.6rem;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- 宣告使用 HTML5。 -->
+<html lang="zh-Hant">
+<head>
+    <!-- ===== SEO 與分享資訊：每一頁都有自己的 title 與 description ===== -->
+    <meta charset="UTF-8">
+    <!-- viewport 讓手機以裝置寬度顯示，是 RWD 的第一步。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="行銷系甲二組影展專題「暫停蔗一刻」的製作團隊與資料來源。">
+    <meta name="keywords" content="暫停蔗一刻團隊, 甲二組, 行銷系影展, 企劃書">
+    <meta name="author" content="吳佳芯">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph：分享到社群時顯示的標題、摘要與縮圖。 -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="暫停蔗一刻｜帝國製糖廠影展專題">
+    <meta property="og:title" content="製作團隊｜暫停蔗一刻">
+    <meta property="og:description" content="行銷系甲二組影展專題「暫停蔗一刻」的製作團隊與資料來源。">
+    <meta property="og:image" content="images/cover.jpg">
+    <meta property="og:image:alt" content="帝國製糖廠臺中營業所的建築正面">
+    <!-- 部署後可再加上 canonical 與 og:url，填入真實網址。 -->
+    <title>製作團隊｜暫停蔗一刻</title>
+    <!--
+        切割後的外部 CSS：四個檔案都放在 css 資料夾，依「基礎 → 版面 → 元件 → 響應式」順序載入。
+        相對路徑 css/xxx.css 從本 HTML 所在的資料夾出發，進入 css 子資料夾讀取檔案。
+    -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- 頂部導覽列：網站名稱與五個分頁的選單，捲動時固定在畫面上方（position: sticky）。 -->
+    <header class="main-header" id="top">
+        <p class="logo"><a href="index.html">暫停蔗一刻<span>帝國製糖廠影展專題</span></a></p>
+        <nav class="top-nav" aria-label="網站導覽">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="story.html">糖廠故事</a></li>
+                <li><a href="film.html">影展短片</a></li>
+                <li><a href="visit.html">漫遊指南</a></li>
+                <li><a href="team.html" class="active" aria-current="page">製作團隊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- layout-wrapper：側邊欄 + 主要內容的雙欄版面；手機版改成上下排列。 -->
+    <div class="layout-wrapper">
+        <!-- aside 是側邊欄：本頁目錄、參觀資訊與關鍵字標籤。 -->
+        <aside class="sidebar" aria-label="側邊欄">
+            <div class="sidebar-box">
+                <h3>本頁目錄</h3>
+                <ul class="side-menu">
+                    <li><a href="#crew">組員分工</a></li>
+                    <li><a href="#target">目標客群</a></li>
+                    <li><a href="#sources">資料來源</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box info-box">
+                <h3>參觀資訊</h3>
+                <p><strong>地址</strong><br>臺中市東區樂業路 30 號</p>
+                <p><strong>交通</strong><br>鄰近臺中火車站與轉運中心，緊鄰 LaLaport</p>
+                <p><strong>園區</strong><br>營業所＋約 6 公頃的湧泉公園（星泉湖）</p>
+            </div>
+            <div class="sidebar-box">
+                <h4>關鍵字</h4>
+                <span class="tag">#甲二組</span>
+                <span class="tag">#團隊合作</span>
+                <span class="tag">#企劃書</span>
+            </div>
+        </aside>
+
+        <!-- main 是本頁唯一的主要內容區。 -->
+        <main class="content-area" id="main-content">
+            <section class="hero-section">
+                <h1>製作團隊</h1>
+                <p class="subtitle">甲二組，八個人一起按下暫停鍵。</p>
+            </section>
+
+            <section class="section-card" id="crew">
+                <div class="section-title">
+                    <h2>組員分工</h2>
+                    <p>依企劃書組員心得整理</p>
+                </div>
+                <div class="info-table-container">
+                    <table class="styled-table">
+                        <caption>甲二組組員與職位</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">姓名</th>
+                                <th scope="col">職位</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">吳佳芯</th><td>組長</td></tr>
+                            <tr><th scope="row">吳淳琳</th><td>企劃</td></tr>
+                            <tr><th scope="row">許嫚妘</th><td>演員</td></tr>
+                            <tr><th scope="row">楊子靚</th><td>導演</td></tr>
+                            <tr><th scope="row">吳珊</th><td>美術設計</td></tr>
+                            <tr><th scope="row">簡偉哲</th><td>企劃與文案</td></tr>
+                            <tr><th scope="row">黃思睿</th><td>演員</td></tr>
+                            <tr><th scope="row">林筱恩</th><td>演員</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section-card" id="target">
+                <div class="section-title">
+                    <h2>目標客群</h2>
+                    <p>壓力釋放型</p>
+                </div>
+                <p>
+                    18～25 歲，重視身心療癒、喜愛人文氛圍與生活分享的年輕學生與上班族。
+                    他們渴望在忙碌生活中，找到能放鬆與喘息的空間。
+                </p>
+            </section>
+
+            <section class="section-card" id="sources">
+                <div class="section-title">
+                    <h2>資料來源</h2>
+                    <p>引用自本組企劃書參考資料</p>
+                </div>
+                <ul class="content-list">
+                    <li><a href="https://nchdb.boch.gov.tw/assets/overview/historicalBuilding/20160425000001" target="_blank" rel="noopener noreferrer">文化部文化資產局：帝國製糖廠臺中營業所暨附屬設施</a></li>
+                    <li><a href="https://travel.taichung.gov.tw/zh-tw/attractions/intro/1423" target="_blank" rel="noopener noreferrer">臺中觀光旅遊網：帝國製糖廠臺中營業所</a></li>
+                    <li><a href="https://www.tchac.taichung.gov.tw/historybuilding?uid=34&amp;pid=13" target="_blank" rel="noopener noreferrer">臺中市文化資產處：帝國製糖廠臺中營業所暨附屬設施</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=_sD8eoPAWGE" target="_blank" rel="noopener noreferrer">YouTube：影展短片「暫停蔗一刻」</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="main-footer">
+        <p>暫停蔗一刻｜關掉喧囂，在糖廠遇見平靜</p>
+        <p><small>甲二組 · 作者：吳佳芯 · 更新日期：<time datetime="2026-11-10">2026 年 11 月 10 日</time></small></p>
+        <p><small>本網站為行銷系課堂專題，場館展覽與營業資訊請以官方最新公告為準。</small></p>
+        <p><a href="#top" class="footer-link">回到頁首</a></p>
+    </footer>
+</body>
+</html>

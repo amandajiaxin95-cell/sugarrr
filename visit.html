@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- 宣告使用 HTML5。 -->
+<html lang="zh-Hant">
+<head>
+    <!-- ===== SEO 與分享資訊：每一頁都有自己的 title 與 description ===== -->
+    <meta charset="UTF-8">
+    <!-- viewport 讓手機以裝置寬度顯示，是 RWD 的第一步。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="跟著影展短片漫遊帝國製糖廠：建議路線、與勤美綠園道、臺中公園、柳川水岸步道的比較，以及 Google 地圖。">
+    <meta name="keywords" content="帝國製糖廠交通, 星泉湖, 湧泉公園, 臺中散步, 帝國製糖廠地圖">
+    <meta name="author" content="吳佳芯">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph：分享到社群時顯示的標題、摘要與縮圖。 -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="暫停蔗一刻｜帝國製糖廠影展專題">
+    <meta property="og:title" content="漫遊指南｜暫停蔗一刻">
+    <meta property="og:description" content="跟著影展短片漫遊帝國製糖廠：建議路線、與勤美綠園道、臺中公園、柳川水岸步道的比較，以及 Google 地圖。">
+    <meta property="og:image" content="images/cover.jpg">
+    <meta property="og:image:alt" content="帝國製糖廠臺中營業所的建築正面">
+    <!-- 部署後可再加上 canonical 與 og:url，填入真實網址。 -->
+    <title>漫遊指南｜暫停蔗一刻</title>
+    <!--
+        切割後的外部 CSS：四個檔案都放在 css 資料夾，依「基礎 → 版面 → 元件 → 響應式」順序載入。
+        相對路徑 css/xxx.css 從本 HTML 所在的資料夾出發，進入 css 子資料夾讀取檔案。
+    -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- 頂部導覽列：網站名稱與五個分頁的選單，捲動時固定在畫面上方（position: sticky）。 -->
+    <header class="main-header" id="top">
+        <p class="logo"><a href="index.html">暫停蔗一刻<span>帝國製糖廠影展專題</span></a></p>
+        <nav class="top-nav" aria-label="網站導覽">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="story.html">糖廠故事</a></li>
+                <li><a href="film.html">影展短片</a></li>
+                <li><a href="visit.html" class="active" aria-current="page">漫遊指南</a></li>
+                <li><a href="team.html">製作團隊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- layout-wrapper：側邊欄 + 主要內容的雙欄版面；手機版改成上下排列。 -->
+    <div class="layout-wrapper">
+        <!-- aside 是側邊欄：本頁目錄、參觀資訊與關鍵字標籤。 -->
+        <aside class="sidebar" aria-label="側邊欄">
+            <div class="sidebar-box">
+                <h3>本頁目錄</h3>
+                <ul class="side-menu">
+                    <li><a href="#route">建議路線</a></li>
+                    <li><a href="#compare">場域比較</a></li>
+                    <li><a href="#map">位置地圖</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box info-box">
+                <h3>參觀資訊</h3>
+                <p><strong>地址</strong><br>臺中市東區樂業路 30 號</p>
+                <p><strong>交通</strong><br>鄰近臺中火車站與轉運中心，緊鄰 LaLaport</p>
+                <p><strong>園區</strong><br>營業所＋約 6 公頃的湧泉公園（星泉湖）</p>
+            </div>
+            <div class="sidebar-box">
+                <h4>關鍵字</h4>
+                <span class="tag">#散步路線</span>
+                <span class="tag">#湖畔漫遊</span>
+                <span class="tag">#LaLaport</span>
+                <span class="tag">#臺中東區</span>
+            </div>
+        </aside>
+
+        <!-- main 是本頁唯一的主要內容區。 -->
+        <main class="content-area" id="main-content">
+            <section class="hero-section">
+                <h1>漫遊指南</h1>
+                <p class="subtitle">闔上電腦、離開書桌，走進這座九十多年的綠洲。</p>
+            </section>
+
+            <section class="section-card" id="route">
+                <div class="section-title">
+                    <h2>跟著短片走一趟</h2>
+                    <p>以下是本組依短片規劃的建議路線，並非官方指定路線</p>
+                </div>
+                <ol class="content-list">
+                    <li>約好友，先在園區或隔壁餐廳吃頓飯，補充體力。</li>
+                    <li>走到營業所前，欣賞 Art Deco 風格的磚造立面與門廊飾帶。</li>
+                    <li>沿著環湖步道繞星泉湖散步，看看湖面與棲息的鳥類。</li>
+                    <li>找個角落和好友合照，為今天的「充電」留下紀錄。</li>
+                </ol>
+            </section>
+
+            <section class="section-card" id="compare">
+                <div class="section-title">
+                    <h2>場域比較</h2>
+                    <p>整理自本組企劃書的競爭者分析</p>
+                </div>
+                <!-- info-table-container 讓表格在手機上可以左右捲動。 -->
+                <div class="info-table-container">
+                    <table class="styled-table">
+                        <caption>帝國糖廠與臺中市區休閒場域比較</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">分析面向</th>
+                                <th scope="col">帝國製糖廠</th>
+                                <th scope="col">勤美綠園道</th>
+                                <th scope="col">臺中公園</th>
+                                <th scope="col">柳川水岸步道</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">核心體驗</th>
+                                <td>歷史記憶與星泉湖畔綠洲</td>
+                                <td>現代潮流商業與市集</td>
+                                <td>市中心傳統休憩老地標</td>
+                                <td>市中心散步與夜景河道</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">自然休閒</th>
+                                <td>環湖步道，水岸開闊</td>
+                                <td>大面積草地，但人潮集中</td>
+                                <td>大片草地與湖泊</td>
+                                <td>綠地較少，以水岸景觀為主</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">歷史建築</th>
+                                <td>日治糖業歷史建築</td>
+                                <td>無歷史工業遺產</td>
+                                <td>百年歷史與湖心亭</td>
+                                <td>現代整治的水岸</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">商業機能</th>
+                                <td>質感餐飲，緊鄰 LaLaport</td>
+                                <td>商業密度極高</td>
+                                <td>幾乎無商業設施</td>
+                                <td>無商業設施</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section-card" id="map">
+                <div class="section-title">
+                    <h2>位置地圖</h2>
+                    <p>臺中市東區樂業路 30 號</p>
+                </div>
+                <!-- Google 地圖以座標定位；網址中的 & 在 HTML 寫成 &amp;。 -->
+                <iframe
+                    class="map-frame"
+                    src="https://maps.google.com/maps?q=24.137813,120.692130&amp;z=16&amp;output=embed"
+                    title="帝國製糖廠臺中營業所位置 Google 地圖"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+                <p class="note-text"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B8%9D%E5%9C%8B%E8%A3%BD%E7%B3%96%E5%BB%A0%E8%87%BA%E4%B8%AD%E7%87%9F%E6%A5%AD%E6%89%80" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟（另開分頁）</a></p>
+            </section>
+        </main>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="main-footer">
+        <p>暫停蔗一刻｜關掉喧囂，在糖廠遇見平靜</p>
+        <p><small>甲二組 · 作者：吳佳芯 · 更新日期：<time datetime="2026-11-10">2026 年 11 月 10 日</time></small></p>
+        <p><small>本網站為行銷系課堂專題，場館展覽與營業資訊請以官方最新公告為準。</small></p>
+        <p><a href="#top" class="footer-link">回到頁首</a></p>
+    </footer>
+</body>
+</html>

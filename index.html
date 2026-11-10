@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- 宣告使用 HTML5。 -->
+<html lang="zh-Hant">
+<head>
+    <!-- ===== SEO 與分享資訊：每一頁都有自己的 title 與 description ===== -->
+    <meta charset="UTF-8">
+    <!-- viewport 讓手機以裝置寬度顯示，是 RWD 的第一步。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="行銷系甲二組影展專題「暫停蔗一刻」：城市持續運轉中，但你可以先休息一下。走進帝國製糖廠臺中營業所，在歷史建築與星泉湖畔為生活重新充電。">
+    <meta name="keywords" content="暫停蔗一刻, 帝國製糖廠, 臺中營業所, 星泉湖, 湧泉公園, 影展, 臺中景點">
+    <meta name="author" content="吳佳芯">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph：分享到社群時顯示的標題、摘要與縮圖。 -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="暫停蔗一刻｜帝國製糖廠影展專題">
+    <meta property="og:title" content="暫停蔗一刻｜帝國製糖廠影展專題">
+    <meta property="og:description" content="行銷系甲二組影展專題「暫停蔗一刻」：城市持續運轉中，但你可以先休息一下。走進帝國製糖廠臺中營業所，在歷史建築與星泉湖畔為生活重新充電。">
+    <meta property="og:image" content="images/cover.jpg">
+    <meta property="og:image:alt" content="帝國製糖廠臺中營業所的建築正面">
+    <!-- 部署後可再加上 canonical 與 og:url，填入真實網址。 -->
+    <title>暫停蔗一刻｜帝國製糖廠影展專題</title>
+    <!--
+        切割後的外部 CSS：四個檔案都放在 css 資料夾，依「基礎 → 版面 → 元件 → 響應式」順序載入。
+        相對路徑 css/xxx.css 從本 HTML 所在的資料夾出發，進入 css 子資料夾讀取檔案。
+    -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- 頂部導覽列：網站名稱與五個分頁的選單，捲動時固定在畫面上方（position: sticky）。 -->
+    <header class="main-header" id="top">
+        <p class="logo"><a href="index.html">暫停蔗一刻<span>帝國製糖廠影展專題</span></a></p>
+        <nav class="top-nav" aria-label="網站導覽">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">首頁</a></li>
+                <li><a href="story.html">糖廠故事</a></li>
+                <li><a href="film.html">影展短片</a></li>
+                <li><a href="visit.html">漫遊指南</a></li>
+                <li><a href="team.html">製作團隊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- layout-wrapper：側邊欄 + 主要內容的雙欄版面；手機版改成上下排列。 -->
+    <div class="layout-wrapper">
+        <!-- aside 是側邊欄：本頁目錄、參觀資訊與關鍵字標籤。 -->
+        <aside class="sidebar" aria-label="側邊欄">
+            <div class="sidebar-box">
+                <h3>本頁目錄</h3>
+                <ul class="side-menu">
+                    <li><a href="#hero">專題封面</a></li>
+                    <li><a href="#about">專題介紹</a></li>
+                    <li><a href="#explore">探索專題</a></li>
+                    <li><a href="#position">我們的定位</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box info-box">
+                <h3>參觀資訊</h3>
+                <p><strong>地址</strong><br>臺中市東區樂業路 30 號</p>
+                <p><strong>交通</strong><br>鄰近臺中火車站與轉運中心，緊鄰 LaLaport</p>
+                <p><strong>園區</strong><br>營業所＋約 6 公頃的湧泉公園（星泉湖）</p>
+            </div>
+            <div class="sidebar-box">
+                <h4>關鍵字</h4>
+                <span class="tag">#都市綠洲</span>
+                <span class="tag">#心靈充電站</span>
+                <span class="tag">#星泉湖</span>
+                <span class="tag">#日治建築</span>
+            </div>
+        </aside>
+
+        <!-- main 是本頁唯一的主要內容區。 -->
+        <main class="content-area" id="main-content">
+            <!-- 首頁封面：背景圖由 CSS 的 .hero-section 載入 images/cover.jpg。 -->
+            <section class="hero-section" id="hero">
+                <h1>暫停蔗一刻</h1>
+                <p class="subtitle">城市持續運轉中，但你可以先休息一下。</p>
+                <a href="film.html" class="btn-primary">觀看影展短片</a>
+            </section>
+
+            <section class="section-card" id="about">
+                <div class="section-title">
+                    <h2>專題介紹</h2>
+                    <p>關掉喧囂，在糖廠遇見平靜</p>
+                </div>
+                <p>
+                    被報告、打工與訊息追著跑的時候，我們常常忘了自己也需要「充電」。
+                    本專題以帝國製糖廠臺中營業所為舞台，鎖定 <strong>18～25 歲、長期承受課業或職場壓力的年輕族群</strong>，
+                    用一支短片告訴大家：休息不代表結束，而是為了繼續走下一段路。
+                </p>
+            </section>
+
+            <section class="section-card" id="explore">
+                <div class="section-title">
+                    <h2>探索專題</h2>
+                    <p>四個分頁，帶你從歷史走到湖畔</p>
+                </div>
+                <!-- grid-system 使用 CSS Grid：依寬度自動決定一列放幾張卡片。 -->
+                <div class="grid-system">
+                    <article class="grid-card">
+                        <span class="card-tag">歷史</span>
+                        <h3>糖廠故事</h3>
+                        <p>1935 年的 Art Deco 營業所，如何從糖業辦公廳舍變成都市綠洲。</p>
+                        <p><a href="story.html">閱讀糖廠故事</a></p>
+                    </article>
+                    <article class="grid-card">
+                        <span class="card-tag">影片</span>
+                        <h3>影展短片</h3>
+                        <p>手機只剩 1% 的學生，跟好友走進糖廠，慢慢充到 100%。</p>
+                        <p><a href="film.html">觀看影展短片</a></p>
+                    </article>
+                    <article class="grid-card">
+                        <span class="card-tag">漫遊</span>
+                        <h3>漫遊指南</h3>
+                        <p>跟著短片的路線走一趟，附上場域比較表與地圖。</p>
+                        <p><a href="visit.html">查看漫遊指南</a></p>
+                    </article>
+                    <article class="grid-card">
+                        <span class="card-tag">團隊</span>
+                        <h3>製作團隊</h3>
+                        <p>甲二組八位組員的分工，以及企劃資料來源。</p>
+                        <p><a href="team.html">認識製作團隊</a></p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-card" id="position">
+                <div class="section-title">
+                    <h2>我們的定位</h2>
+                    <p>都市情緒防空洞</p>
+                </div>
+                <p>
+                    不同於追求熱鬧的百貨商圈，帝國製糖廠結合<strong>歷史文化、自然湖景與心靈充電</strong>，
+                    是市中心少數同時擁有日治建築、湖畔靜謐感與質感餐飲的複合場域。
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="main-footer">
+        <p>暫停蔗一刻｜關掉喧囂，在糖廠遇見平靜</p>
+        <p><small>甲二組 · 作者：吳佳芯 · 更新日期：<time datetime="2026-11-10">2026 年 11 月 10 日</time></small></p>
+        <p><small>本網站為行銷系課堂專題，場館展覽與營業資訊請以官方最新公告為準。</small></p>
+        <p><a href="#top" class="footer-link">回到頁首</a></p>
+    </footer>
+</body>
+</html>
