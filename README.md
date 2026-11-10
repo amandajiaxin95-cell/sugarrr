@@ -10,7 +10,7 @@
 
 - GitHub：（https://github.com/amandajiaxin95-cell/sugarrr）
 - InfinityFree：(https://jiaxin.site.je/)
-- Vercel：（https://xxxx.vercel.app/）
+- Vercel：（https://xxxx.vercel.app/)
 
 ## 我使用的 Vibe Coding 指令
 
