@@ -8,9 +8,9 @@
 
 ## 網站連結
 
-- GitHub：（貼上本 repository 網址）
-- InfinityFree：（貼上部署後的網址）
-- Vercel：（貼上部署後的網址）
+- GitHub：（https://github.com/amandajiaxin95-cell/sugarrr）
+- InfinityFree：(https://jiaxin.site.je/)
+- Vercel：（https://xxxx.vercel.app/）
 
 ## 我使用的 Vibe Coding 指令
 
